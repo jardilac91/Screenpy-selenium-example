@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 screenpy-selenium = "*"
 screenpy-adapter-allure = "*"
+webdriver-manager = "*"
 
 [dev-packages]
 
