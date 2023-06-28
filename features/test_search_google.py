@@ -15,7 +15,7 @@ from locators.ResultPage import result
 
 @act("realizar una búsqueda en google")
 @scene("buscar la documentación de screenpy en google")
-def test_search_for_coink(Usuario: Actor)->None:
+def test_search_for_screenpy(Usuario: Actor)->None:
     """Se espera que el usuario inicie el navegador"""
     given(Usuario).was_able_to(Open.their_browser_on(URL))
     """Posteriormente se indican las acciones que el usuario va a realizar"""
