@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 jobs:
   scrape:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checking out repo
         uses: actions/checkout@v3
