@@ -22,4 +22,4 @@ def fixture_actor() -> Generator:
 """Agregamos el adaptador de allure para generar los reportes"""
 the_narrator.adapters.append(AllureAdapter())
 
-URL = "https://google.com"
+URL = "https://google.com.co"
