@@ -29,10 +29,7 @@ jobs:
         run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay
       - name: Install xvfb
         run: sudo apt-get install xvfb
-      - name: install dependencies and setting up the virtual environment
-        run: pip install pipenv
-        run: pipenv install
-        run: pipenv shell
-        run: pipenv sync       
+      - name: install dependencies
+        run: pip install -r requirements.txt      
       - name: Running the Python script
         run: pytest
