@@ -26,4 +26,5 @@ jobs:
       - name: Running the Python script
         run: pytest
       - name: Download a Build Artifact
+        if: ${{ failure() }}
         uses: actions/download-artifact@v2.1.1
