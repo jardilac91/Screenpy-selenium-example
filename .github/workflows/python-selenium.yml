@@ -25,6 +25,12 @@ jobs:
         run: pip install -r requirements.txt      
       - name: Running the Python script
         run: pytest
+      - name: upload a Build Artifact
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2.1.1
+        with:
+          name: google.png 
       - name: Download a Build Artifact
         if: ${{ failure() }}
         uses: actions/download-artifact@v2.1.1
+        
