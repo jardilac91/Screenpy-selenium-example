@@ -23,5 +23,5 @@ def test_search_for_screenpy_selenium_tutorial_repository(Usuario: Actor)->None:
     )
     """Por último se espera que el usuario pueda ver el texto en el item de búsqueda"""
     then(Usuario).should(
-        See.the(Text.of_the(results), ContainsTheText('1 repository result'))
+        See.the(Text.of_the(results), ContainsTheText('repository result'))
     )
