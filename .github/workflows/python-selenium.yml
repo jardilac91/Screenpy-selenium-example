@@ -25,3 +25,5 @@ jobs:
         run: pip install -r requirements.txt      
       - name: Running the Python script
         run: pytest
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.1
