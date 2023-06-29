@@ -9,8 +9,11 @@
 name: Run Selenium On GitHub Action
 on:
   workflow_dispatch:
+  push:
+    branches:
+    -main
 jobs:
-  scrape:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out repo
