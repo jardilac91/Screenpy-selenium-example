@@ -21,11 +21,15 @@ def test_search_for_screenpy(Usuario: Actor)->None:
     given(Usuario).was_able_to(Open.their_browser_on(URL))
     """Posteriormente se indican las acciones que el usuario va a realizar"""
     when(Usuario).attempts_to(
-        Enter.the_text('screenpy').into_the(search_input).then_hit(Keys.RETURN),
+        Enter.the_text('screenpy').into_the(search_input).then_hit(Keys.RETURN)
+    )
+    and_(Usuario).attempts_to(
         Wait.for_the(result_section).to_appear(),
         SaveScreenshot.as_("page.png").and_attach_it(
             name="error", attachment_type=AttachmentType.PNG
         ),
+    )
+    and_(Usuario).attempts_to(
         Wait.for_the(result).to_appear()
     )
     """Por último se espera que el usuario pueda ver el texto en el item de búsqueda"""
