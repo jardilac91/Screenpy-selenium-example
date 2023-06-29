@@ -29,7 +29,8 @@ jobs:
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2.1.1
         with:
-          name: google.png 
+          name: google.png
+          path: /home/runner/work/Screenpy-selenium-example/Screenpy-selenium-example/page.png
       - name: Download a Build Artifact
         if: ${{ failure() }}
         uses: actions/download-artifact@v2.1.1
